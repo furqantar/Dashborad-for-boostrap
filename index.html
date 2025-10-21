@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styel.css" />
+    <!-- <link rel="stylesheet" href="index.js" /> -->
+    <title>Dashboard for Admin</title>
+  </head>
+
+  <body>
+    <!-- side bar -->
+
+    <div class="container-fluid p-0">
+      <div class="row w-100 mx-auto">
+        <div id="dashborad-sidebar" class="dashborad-sidebar col-lg-3 overflow-x-hidden p-0 d-none d-lg-block">
+          <div class="main-logo d-flex justify-content-between">
+            <div class="logo-pic pt-3 ps-3 d-none d-lg-block">
+              <img src="logo.pic" class="img-fluid" width="100" alt="" />
+            </div>
+          </div>
+          <aside class="d-flex flex-column gap-1">
+            <span class="nav-header">Dashboard</span>
+            <!-- dashboard -->
+            <div class="nav-link-wrapper mt-2">
+              <button class="nav-main-link border-0 rounded-4 w-100" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collapseExample">
+                <div class="nav-iteams d-flex align-items-center gap-1 justify-content-between w-100">
+                  <span class="text-decoration-none d-inline-flex align-items-center align-content-center gap-1 w-100">
+                    <i class="ri-home-9-line fs-5"></i>
+                    <p class="nav-link-text mb-0">
+                      Dashborad
+                      <span class="rounded-1 text-decoration-none badge ms-1 bg-success justify-content-between">4</span>
+                    </p>
+                  </span>
+                  <div id="arrow" class="arrow">
+                    <i class="ri-arrow-right-s-line text-dark"></i>
+                  </div>
+                </div>
+              </button>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body border-0">
+                  <li class="Non-order list-unstyled m-2" style="border-left: 2px solid rgb(226, 214, 214)">
+                    <a href="" class="text-decoration-none"><p>Project</p></a>
+                    <a href="" class="text-decoration-none"><p style="color: #7d6dc2">Ecommerce</p></a>
+                  </li>
+                </div>
+              </div>
+            </div>
+            <!-- dashBoard-end -->
+            <!-- apps-start -->
+            <div class="nav-link-wrapper mt-2">
+              <button class="nav-main-link border-0 rounded-4 w-100" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collapseone">
+                <div class="nav-iteams d-flex align-items-center gap-1 justify-content-between w-100">
+                  <span class="text-decoration-none d-inline-flex align-items-center align-content-center gap-1 w-100">
+                    <i class="ri-apps-2-add-line fs-5"></i>
+                    <p class="nav-link-text mb-0">
+                      Apps
+                      <!-- <span class="rounded-1 text-decoration-none badge ms-1 bg-success justify-content-between">4</span> -->
+                    </p>
+                  </span>
+                  <div id="arrow" class="arrow">
+                    <i class="ri-arrow-right-s-line text-dark"></i>
+                  </div>
+                </div>
+              </button>
+              <div class="collapse" id="collapseone">
+                <div class="card card-body border-0">
+                  <ul>
+                    <li class="Non-order list-unstyled m-2" style="border-left: 2px solid rgb(226, 214, 214)">
+                      <a href="" class="text-decoration-none"><p>Calender</p></a>
+                      <a href="" class="text-decoration-none"><p>Profile</p></a>
+                      <a href="" class="text-decoration-none"><p>project page</p></a>
+                      <a href="" class="text-decoration-none"><p>To-Do</p></a>
+                      <a href="" class="text-decoration-none"><p>Team</p></a>
+                      <a href="" class="text-decoration-none"><p>Api</p></a>
+                      <a href="" class="text-decoration-none"><p>Ticket</p></a>
+                      <a href="" class="text-decoration-none"><p>Email Page</p></a>
+                      <a href="" class="text-decoration-none"><p>E-Shop</p></a>
+                      <a href="" class="text-decoration-none"><p>Invoice</p></a>
+                      <a href="" class="text-decoration-none"><p>File manager</p></a>
+                      <a href="" class="text-decoration-none"><p>Bookmarks</p></a>
+                      <a href="" class="text-decoration-none"><p>Kanban borad</p></a>
+                      <a href="" class="text-decoration-none"><p>Timeline</p></a>
+                      <a href="" class="text-decoration-none"><p>FAQS</p></a>
+                      <a href="" class="text-decoration-none"><p>Pricing</p></a>
+                      <a href="" class="text-decoration-none"><p>Gallery</p></a>
+                      <a href="" class="text-decoration-none"><p>Bolg page</p></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- apps-end -->
+            <div class="weight mt-2 ms-2">
+              <span class="text-decoration-none d-inline-flex align-items-center align-content-center gap-1 w-100">
+                <i class="ri-webhook-line fs-5"></i>
+                <p class="nav-link-text mb-0 m-1">Widgets</p>
+              </span>
+            </div>
+            <span class="nav-header">Component</span>
+            <!-- unit-star -->
+            <div class="nav-link-wrapper mt-2">
+              <button class="nav-main-link border-0 rounded-4 w-100" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collapsthree">
+                <div class="nav-iteams d-flex align-items-center gap-1 justify-content-between w-100">
+                  <span class="text-decoration-none d-inline-flex align-items-center align-content-center gap-1 w-100">
+                    <i class="ri-briefcase-3-line fs-5"></i>
+                    <p class="nav-link-text mb-0">UI Kits</p>
+                  </span>
+                  <div id="arrow" class="arrow">
+                    <i class="ri-arrow-right-s-line text-dark"></i>
+                  </div>
+                </div>
+              </button>
+              <div class="collapse" id="collapsthree">
+                <div class="card card-body border-0">
+                  <ul>
+                    <li class="Non-order list-unstyled m-2" style="border-left: 2px solid rgb(226, 214, 214)">
+                      <a href="" class="text-decoration-none"><p>Cheatsheet</p></a>
+                      <a href="" class="text-decoration-none"><p>Alert</p></a>
+                      <a href="" class="text-decoration-none"><p>Badges</p></a>
+                      <a href="" class="text-decoration-none"><p>Butoon</p></a>
+                      <a href="" class="text-decoration-none"><p>Carts</p></a>
+                      <a href="" class="text-decoration-none"><p>Dropdown</p></a>
+                      <a href="" class="text-decoration-none"><p>Grid</p></a>
+                      <a href="" class="text-decoration-none"><p>Avtar</p></a>
+                      <a href="" class="text-decoration-none"><p>tabs</p></a>
+                      <a href="" class="text-decoration-none"><p>Accordions</p></a>
+                      <a href="" class="text-decoration-none"><p>Progress</p></a>
+                      <a href="" class="text-decoration-none"><p>Notification</p></a>
+                      <a href="" class="text-decoration-none"><p>Liste</p></a>
+                      <a href="" class="text-decoration-none"><p>Helper Classes</p></a>
+                      <a href="" class="text-decoration-none"><p>Bcakground</p></a>
+                      <a href="" class="text-decoration-none"><p>Divider</p></a>
+                      <a href="" class="text-decoration-none"><p>Ribbons</p></a>
+                      <a href="" class="text-decoration-none"><p>Editor</p></a>
+                      <a href="" class="text-decoration-none"><p>Collapse</p></a>
+                      <a href="" class="text-decoration-none"><p>Footer</p></a>
+                      <a href="" class="text-decoration-none"><p>Shodow</p></a>
+                      <a href="" class="text-decoration-none"><p>Wrapper</p></a>
+                      <a href="" class="text-decoration-none"><p>Bullet</p></a>
+                      <a href="" class="text-decoration-none"><p>Placeholder</p></a>
+                      <a href="" class="text-decoration-none"><p>Alignment Thing</p></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- unit-end -->
+
+            <!-- UI-start -->
+            <div class="nav-link-wrapper mt-2">
+              <button class="nav-main-link border-0 rounded-4 w-100" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collapsfour">
+                <div class="nav-iteams d-flex align-items-center gap-1 justify-content-between w-100">
+                  <span class="text-decoration-none d-inline-flex align-items-center align-content-center gap-1 w-100">
+                    <i class="ri-cast-fill fs-5"></i>
+                    <p class="nav-link-text mb-0">
+                      Advnace UI
+                      <span class="rounded-1 text-decoration-none badge ms-1 justify-content-between" style="background-color: rgb(226, 226, 137)">12+</span>
+                    </p>
+                  </span>
+                  <div id="arrow" class="arrow">
+                    <i class="ri-arrow-right-s-line text-dark"></i>
+                  </div>
+                </div>
+              </button>
+              <div class="collapse" id="collapsfour">
+                <div class="card card-body border-0">
+                  <ul>
+                    <li class="Non-order list-unstyled m-2" style="border-left: 2px solid rgb(226, 214, 214)">
+                      <a href="" class="text-decoration-none"><p>Modals</p></a>
+                      <a href="" class="text-decoration-none"><p>Offcanvas Toggle</p></a>
+                      <a href="" class="text-decoration-none"><p>Sweat Alert</p></a>
+                      <a href="" class="text-decoration-none"><p>Scrollbar</p></a>
+                      <a href="" class="text-decoration-none"><p>Spinners</p></a>
+                      <a href="" class="text-decoration-none"><p>Animation</p></a>
+                      <a href="" class="text-decoration-none"><p>Video Embed</p></a>
+                      <a href="" class="text-decoration-none"><p>Tour</p></a>
+                      <a href="" class="text-decoration-none"><p>Slider</p></a>
+                      <a href="" class="text-decoration-none"><p>Bootstrap Slider</p></a>
+                      <a href="" class="text-decoration-none"><p>Scrollpy</p></a>
+                      <a href="" class="text-decoration-none"><p>Tooltip & Popovers</p></a>
+                      <a href="" class="text-decoration-none"><p>Rating</p></a>
+                      <a href="" class="text-decoration-none"><p>Count Down</p></a>
+                      <a href="" class="text-decoration-none"><p>Count up</p></a>
+                      <a href="" class="text-decoration-none"><p>Draggable</p></a>
+                      <a href="" class="text-decoration-none"><p>Tree View</p></a>
+                      <a href="" class="text-decoration-none"><p>Tree View</p></a>
+                      <a href="" class="text-decoration-none"><p>Block Ui</p></a>
+                      <a href="" class="text-decoration-none"><p></p></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- UI-end -->
+            <div class="nav-link-wrapper mt-2">
+              <button class="nav-main-link border-0 rounded-4 w-100" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collaps-furqan">
+                <div class="nav-iteams d-flex align-items-center gap-1 justify-content-between w-100">
+                  <span class="text-decoration-none d-inline-flex align-items-center align-content-center gap-1 w-100">
+                    <i class="ri-remixicon-fill fs-5"></i>
+                    <p class="nav-link-text mb-0">Icons</p>
+                  </span>
+                  <div id="arrow" class="arrow">
+                    <i class="ri-arrow-right-s-line text-dark"></i>
+                  </div>
+                </div>
+              </button>
+              <div class="collapse" id="collaps-furqan">
+                <div class="card card-body border-0">
+                  <ul>
+                    <li class="Non-order list-unstyled m-2" style="border-left: 2px solid rgb(226, 214, 214)">
+                      <a href="" class="text-decoration-none"><p>Fontawesome</p></a>
+                      <a href="" class="text-decoration-none"><p>Flag</p></a>
+                      <a href="" class="text-decoration-none"><p>Tabler</p></a>
+                      <a href="" class="text-decoration-none"><p>Weather</p></a>
+                      <a href="" class="text-decoration-none"><p>Animated</p></a>
+                      <a href="" class="text-decoration-none"><p>Animation</p></a>
+                      <a href="" class="text-decoration-none"><p>Iconoir</p></a>
+                      <a href="" class="text-decoration-none"><p>Phosphor</p></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- icons-start -->
+
+            <!-- icons-end -->
+            <div class="button active mt-3 rounded-3" data-bs-toggle="collapse" data-bs-target="#collapse-six">
+              <span class="nav-header">Maps & Charts</span>
+            </div>
+            <!-- map -->
+            <div class="nav-link-wrapper mt-2">
+              <button class="nav-main-link border-0 rounded-4 w-100" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collapse-six">
+                <div class="nav-iteams d-flex align-items-center gap-1 justify-content-between w-100">
+                  <span class="text-decoration-none d-inline-flex align-items-center align-content-center gap-1 w-100">
+                    <i class="ri-map-2-line fs-5"></i>
+                    <p class="nav-link-text mb-0">Map</p>
+                  </span>
+                  <div id="arrow" class="arrow">
+                    <i class="ri-arrow-right-s-line text-dark"></i>
+                  </div>
+                </div>
+              </button>
+              <div class="collapse" id="collapse-six">
+                <div class="card card-body border-0">
+                  <li class="Non-order list-unstyled m-2" style="border-left: 2px solid rgb(226, 214, 214)">
+                    <a href="" class="text-decoration-none"><p>Google Map</p></a>
+                    <a href="" class="text-decoration-none"><p>Leaflet map</p></a>
+                  </li>
+                </div>
+              </div>
+            </div>
+
+            <!-- map-end -->
+
+            <!-- charts -->
+            <div class="nav-link-wrapper mt-2">
+              <button class="nav-main-link border-0 rounded-4 w-100" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collapse-seven">
+                <div class="nav-iteams d-flex align-items-center gap-1 justify-content-between w-100">
+                  <span class="text-decoration-none d-inline-flex align-items-center align-content-center gap-1 w-100">
+                    <i class="ri-file-chart-line fs-5"></i>
+                    <p class="nav-link-text mb-0">Chart</p>
+                  </span>
+                  <div id="arrow" class="arrow">
+                    <i class="ri-arrow-right-s-line text-dark"></i>
+                  </div>
+                </div>
+              </button>
+              <div class="collapse" id="collapse-seven">
+                <div class="card card-body border-0">
+                  <li class="Non-order list-unstyled m-2" style="border-left: 2px solid rgb(226, 214, 214)">
+                    <a href="" class="text-decoration-none"><p>Chart js</p></a>
+                    <a href="" class="text-decoration-none"><p>Apexcharts</p></a>
+                  </li>
+                </div>
+              </div>
+            </div>
+            <!-- chart-end -->
+            <span class="nav-header">Table & Forms</span>
+            <!-- table-start -->
+            <div class="nav-link-wrapper mt-2">
+              <button class="nav-main-link border-0 rounded-4 w-100" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collaps-ahad">
+                <div class="nav-iteams d-flex align-items-center gap-1 justify-content-between w-100">
+                  <span class="text-decoration-none d-inline-flex align-items-center align-content-center gap-1 w-100">
+                    <i class="ri-table-line fs-5"></i>
+                    <p class="nav-link-text mb-0">Table</p>
+                  </span>
+                  <div id="arrow" class="arrow">
+                    <i class="ri-arrow-right-s-line text-dark"></i>
+                  </div>
+                </div>
+              </button>
+              <div class="collapse" id="collaps-ahad">
+                <div class="card card-body border-0">
+                  <ul>
+                    <li class="Non-order list-unstyled m-2" style="border-left: 2px solid rgb(226, 214, 214)">
+                      <a href="" class="text-decoration-none"><p>BasicTable</p></a>
+                      <a href="" class="text-decoration-none"><p>Data Table</p></a>
+                      <a href="" class="text-decoration-none"><p>ata Table</p></a>
+                      <a href="" class="text-decoration-none"><p>Advance Table</p></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- table-end -->
+
+            <!-- form-start -->
+            <div class="nav-link-wrapper mt-2">
+              <button class="nav-main-link border-0 rounded-4 w-100" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collaps-user-in">
+                <div class="nav-iteams d-flex align-items-center gap-1 justify-content-between w-100">
+                  <span class="text-decoration-none d-inline-flex align-items-center align-content-center gap-1 w-100">
+                    <i class="ri-side-bar-line fs-5"></i>
+                    <p class="nav-link-text mb-0">Form Element</p>
+                  </span>
+                  <div id="arrow" class="arrow">
+                    <i class="ri-arrow-right-s-line text-dark"></i>
+                  </div>
+                </div>
+              </button>
+              <div class="collapse" id="collaps-user-in">
+                <div class="card card-body border-0">
+                  <ul>
+                    <li class="Non-order list-unstyled m-2" style="border-left: 2px solid rgb(226, 214, 214)">
+                      <a href="" class="text-decoration-none"><p>Modals</p></a>
+                      <a href="" class="text-decoration-none"><p>Offcanvas Toggle</p></a>
+                      <a href="" class="text-decoration-none"><p>Sweat Alert</p></a>
+                      <a href="" class="text-decoration-none"><p>Scrollbar</p></a>
+                      <a href="" class="text-decoration-none"><p>Spinners</p></a>
+                      <a href="" class="text-decoration-none"><p>Animation</p></a>
+                      <a href="" class="text-decoration-none"><p>Video Embed</p></a>
+                      <a href="" class="text-decoration-none"><p>Tour</p></a>
+                      <a href="" class="text-decoration-none"><p>Slider</p></a>
+                      <a href="" class="text-decoration-none"><p>Bootstrap Slider</p></a>
+                      <a href="" class="text-decoration-none"><p>Scrollpy</p></a>
+                      <a href="" class="text-decoration-none"><p>Tooltip & Popovers</p></a>
+                      <a href="" class="text-decoration-none"><p>Rating</p></a>
+                      <a href="" class="text-decoration-none"><p>Count Down</p></a>
+                      <a href="" class="text-decoration-none"><p>Count up</p></a>
+                      <a href="" class="text-decoration-none"><p>Draggable</p></a>
+                      <a href="" class="text-decoration-none"><p>Tree View</p></a>
+                      <a href="" class="text-decoration-none"><p>Tree View</p></a>
+                      <a href="" class="text-decoration-none"><p>Block Ui</p></a>
+                      <a href="" class="text-decoration-none"><p></p></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- form-end -->
+            <!-- user -->
+            <div class="nav-link-wrapper mt-2">
+              <button class="nav-main-link border-0 rounded-4 w-100" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collaps-in-user">
+                <div class="nav-iteams d-flex align-items-center gap-1 justify-content-between w-100">
+                  <span class="text-decoration-none d-inline-flex align-items-center align-content-center gap-1 w-100">
+                    <i class="ri-cast-fill fs-5"></i>
+                    <p class="nav-link-text mb-0">
+                      Ready to use
+                      <span class="rounded-1 text-decoration-none badge ms-1 justify-content-between" style="background-color: rgb(133, 207, 133)">New</span>
+                    </p>
+                  </span>
+                  <div id="arrow" class="arrow">
+                    <i class="ri-arrow-right-s-line text-dark"></i>
+                  </div>
+                </div>
+              </button>
+              <div class="collapse" id="collaps-in-user">
+                <div class="card card-body border-0">
+                  <ul>
+                    <li class="Non-order list-unstyled m-2" style="border-left: 2px solid rgb(226, 214, 214)">
+                      <a href="" class="text-decoration-none"><p>Form wizards</p></a>
+                      <a href="" class="text-decoration-none"><p>Form wizards 1</p></a>
+                      <a href="" class="text-decoration-none"><p>Form wizards 2</p></a>
+                      <a href="" class="text-decoration-none"><p>Ready To Use Form</p></a>
+                      <a href="" class="text-decoration-none"><p>Ready To Use Tables</p></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- user-end -->
+            <!-- page -->
+            <span class="nav-header">Page</span>
+            <!-- page-start -->
+
+            <div class="nav-link-wrapper mt-2">
+              <button class="nav-main-link border-0 rounded-4 w-100" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collaps-user-page">
+                <div class="nav-iteams d-flex align-items-center gap-1 justify-content-between w-100">
+                  <span class="text-decoration-none d-inline-flex align-items-center align-content-center gap-1 w-100">
+                    <i class="ri-pages-line fs-5"></i>
+                    <p class="nav-link-text mb-0">Auth Page</p>
+                  </span>
+                  <div id="arrow" class="arrow">
+                    <i class="ri-arrow-right-s-line text-dark"></i>
+                  </div>
+                </div>
+              </button>
+              <div class="collapse" id="collaps-user-page">
+                <div class="card card-body border-0">
+                  <ul>
+                    <li class="Non-order list-unstyled m-2" style="border-left: 2px solid rgb(226, 214, 214)">
+                      <a href="" class="text-decoration-none"><p>Sign In</p></a>
+                      <a href="" class="text-decoration-none"><p>Sign In with Bg-image</p></a>
+                      <a href="" class="text-decoration-none"><p>Sign Up</p></a>
+                      <a href="" class="text-decoration-none"><p>Sign Up with Bg-image</p></a>
+                      <a href="" class="text-decoration-none"><p>Password Reset</p></a>
+                      <a href="" class="text-decoration-none"><p>Password Reset with Bg-image</p></a>
+                      <a href="" class="text-decoration-none"><p>Password Create</p></a>
+                      <a href="" class="text-decoration-none"><p>Password Create with Bg-image</p></a>
+                      <a href="" class="text-decoration-none"><p>Lock Screen</p></a>
+                      <a href="" class="text-decoration-none"><p>Lock Screen with Bg-image</p></a>
+                      <a href="" class="text-decoration-none"><p>Two-Step Verification</p></a>
+                      <a href="" class="text-decoration-none"><p>Two-Step Verification with B</p></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- end-page -->
+
+            <!-- error -->
+
+            <div class="nav-link-wrapper mt-2">
+              <button class="nav-main-link border-0 rounded-4 w-100" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collaps-error">
+                <div class="nav-iteams d-flex align-items-center gap-1 justify-content-between w-100">
+                  <span class="text-decoration-none d-inline-flex align-items-center align-content-center gap-1 w-100">
+                    <i class="ri-error-warning-line fs-5"></i>
+                    <p class="nav-link-text mb-0">Error</p>
+                  </span>
+                  <div id="arrow" class="arrow">
+                    <i class="ri-arrow-right-s-line text-dark"></i>
+                  </div>
+                </div>
+              </button>
+              <div class="collapse" id="collaps-error">
+                <div class="card card-body border-0">
+                  <ul>
+                    <li class="Non-order list-unstyled m-2" style="border-left: 2px solid rgb(226, 214, 214)">
+                      <a href="" class="text-decoration-none"><p>Bad Request</p></a>
+                      <a href="" class="text-decoration-none"><p>Forbidden</p></a>
+                      <a href="" class="text-decoration-none"><p>Not Found</p></a>
+                      <a href="" class="text-decoration-none"><p>Internal Server</p></a>
+                      <a href="" class="text-decoration-none"><p>Service Unavailable</p></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- error-end -->
+            <!-- other-page -->
+
+            <div class="nav-link-wrapper mt-2">
+              <button class="nav-main-link border-0 rounded-4 w-100" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collaps-other">
+                <div class="nav-iteams d-flex align-items-center gap-1 justify-content-between w-100">
+                  <span class="text-decoration-none d-inline-flex align-items-center align-content-center gap-1 w-100">
+                    <i class="ri-pages-fill fs-5"></i>
+                    <p class="nav-link-text mb-0">Other page</p>
+                  </span>
+                  <div id="arrow" class="arrow">
+                    <i class="ri-arrow-right-s-line text-dark"></i>
+                  </div>
+                </div>
+              </button>
+              <div class="collapse" id="collaps-other">
+                <div class="card card-body border-0">
+                  <ul>
+                    <li class="Non-order list-unstyled m-2" style="border-left: 2px solid rgb(226, 214, 214)">
+                      <a href="" class="text-decoration-none"><p>Blank</p></a>
+                      <a href="" class="text-decoration-none"><p>Maintenance</p></a>
+                      <a href="" class="text-decoration-none"><p>Landing Page</p></a>
+
+                      <a href="" class="text-decoration-none"><p>Coming Soon</p></a>
+                      <a href="" class="text-decoration-none"><p>Sitemap</p></a>
+
+                      <a href="" class="text-decoration-none"><p>Privacy Policy</p></a>
+                      <a href="" class="text-decoration-none"><p>Terms & Condition</p></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <span class="others pt-3"> Others</span>
+            <!-- last-side -->
+            <div class="nav-link-wrapper mt-2">
+              <button class="nav-main-link border-0 rounded-4 w-100" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collapseExample">
+                <div class="nav-iteams d-flex align-items-center gap-1 justify-content-between w-100">
+                  <span class="text-decoration-none d-inline-flex align-items-center align-content-center gap-1 w-100">
+                    <i class="ri-safe-2-line fs-5"></i>
+                    <p class="nav-link-text mb-0">2 Level</p>
+                  </span>
+                  <div id="arrow" class="arrow">
+                    <i class="ri-arrow-right-s-line text-dark"></i>
+                  </div>
+                </div>
+              </button>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body border-0">
+                  <li class="Non-order list-unstyled m-2" style="border-left: 2px solid rgb(226, 214, 214)">
+                    <a href="" class="text-decoration-none"><p>Bank</p></a>
+                    <a href="" class="text-decoration-none"><p>Another Level</p></a>
+                  </li>
+                </div>
+              </div>
+            </div>
+            <div class="button active mt-3 rounded-3" data-bs-toggle="collapse" data-bs-target="#collapse-six">
+              <a class="text-decoration-none text-muted fs-4" href="#"><i class="ri-article-line fs-5 ms-1"></i> <span class="text-decoration-none text-dark" style="font-size: 16px; font-weight: 500">Documents</span></a>
+            </div>
+
+            <div class="button active mt-3 rounded-3" data-bs-toggle="collapse" data-bs-target="#collapse-six">
+              <a class="text-decoration-none text-muted fs-4" href="#"> <i class="ri-medal-2-line fs-5 ms-1"></i> <span class="text-decoration-none text-dark" style="font-size: 16px; font-weight: 500">Supports</span></a>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- nav-bar-start -->
+
+      <div class="bar-link-col col-lg-9 col-md-12 col-sm-12">
+        <div id="main-contain" class="main-contain d-flex justify-content-between">
+          <div class="contain mt-2">
+            <i id="search-app-open" class="ri-apps-2-line fs-3 bg-body-secondary p-1 m-3 rounded-circle"></i>
+          </div>
+          <div class="nav-links m-3">
+            <ul>
+              <li class="list-unstyled">
+                <!-- first-icons -->
+                <button class="icon-btn border-0" style="background: none" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-1" data-title="User Management" data-id="#RA789">
+                  <i class="ri-temp-hot-line fs-4 m-1" style="color: #7d6dc2"> <span class="fs-5 text-decoration-none text-dark"> 26</span><sup class="text-dark">.c</sup> </i>
+                </button>
+                <div class="offcanvas offcanvas-end rounded-4" style="margin-top: 60px; margin-right: 70px; height: 30%; width: 30%" tabindex="-1" id="offcanvas-1" aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header">
+                    <div class="body-offcanvas d-flex gap-2">
+                      <div class="mon p-1">
+                        <p class="m-2 text-white ps-1">Mon</p>
+                        <h5 class="m-1 pt-3 text-white ps-1 m-1" style="font-size: 14px">+29°C</h5>
+                        <i class="ri-cloud-line fs-4 ps-3 text-white"></i>
+                        <i class="ri-drop-line m-2 pt-3 text-white pt-5"><span class="" style="font-weight: 500; font-family: sans-serif; font-size: 13px">2%</span></i>
+                      </div>
+                      <div class="tus">
+                        <p class="m-2 pt-1 text-white ps-1">Tus</p>
+                        <h5 class="m-1 pt-3 text-white ps-1 m-1" style="font-size: 14px">+29°C</h5>
+                        <i class="ri-sun-cloudy-line fs-4 ps-3 text-white"></i>
+                        <i class="ri-drop-line m-2 pt-3 text-white pt-5"><span class="" style="font-weight: 500; font-family: sans-serif; font-size: 13px">2%</span></i>
+                      </div>
+
+                      <div class="wed">
+                        <p class="m-2 pt-1 text-white ps-1">Wed</p>
+                        <h5 class="m-1 pt-3 text-white ps-1 m-1" style="font-size: 14px">+29°C</h5>
+                        <i class="ri-sun-line fs-4 ps-3 text-white"></i>
+                        <i class="ri-drop-line m-2 pt-3 text-white pt-5"><span class="" style="font-weight: 500; font-family: sans-serif; font-size: 13px">1%</span></i>
+                      </div>
+
+                      <div class="Thu">
+                        <p class="m-2 pt-1 text-white ps-1">Thu</p>
+                        <h5 class="m-1 pt-3 text-white ps-1 m-1" style="font-size: 14px; font-weight: 600px">+18°C</h5>
+                        <i class="ri-sun-line fs-4 ps-3 text-white"></i>
+                        <i class="ri-drop-line m-2 pt-3 text-white pt-5"><span class="" style="font-weight: 500; font-family: sans-serif; font-size: 13px">1%</span></i>
+                      </div>
+
+                      <div class="fri">
+                        <p class="m-2 pt-1 text-white ps-1">Fri</p>
+                        <h5 class="m-1 pt-3 text-white ps-1 m-1" style="font-size: 14px; font-weight: 600px">+18°C</h5>
+                        <i class="ri-sun-line fs-4 ps-3 text-white"></i>
+                        <i class="ri-drop-line m-2 pt-3 text-white pt-5"><span class="" style="font-weight: 500; font-family: sans-serif; font-size: 13px">1%</span></i>
+                      </div>
+
+                      <div class="sat">
+                        <p class="m-2 pt-1 text-white ps-1">Sat</p>
+                        <h5 class="m-1 pt-3 text-white ps-1 m-1" style="font-size: 14px; font-weight: 600px">+18°C</h5>
+                        <i class="ri-sun-line fs-4 ps-3 text-white"></i>
+                        <i class="ri-drop-line m-2 pt-3 text-white pt-5"><span class="" style="font-weight: 500; font-family: sans-serif; font-size: 13px">1%</span></i>
+                      </div>
+
+                      <div class="sun">
+                        <p class="m-2 pt-1 text-white ps-1">Sun</p>
+                        <h5 class="m-1 pt-3 text-white ps-1 m-1" style="font-size: 14px; font-weight: 600px">+18°C</h5>
+                        <i class="ri-sun-line fs-4 ps-3 text-white"></i>
+                        <i class="ri-drop-line m-2 pt-3 text-white pt-5"><span class="" style="font-weight: 500; font-family: sans-serif; font-size: 13px">1%</span></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <img src="flag-pic.png" alt="" class="rounded-circle ms-2" style="width: 25px; height: 25px" />
+
+                <!-- second-icons -->
+                <button class="border-0" style="background: none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-2" aria-controls="offcanvasRight">
+                  <i class="ri-search-line fs-4 m-1"></i>
+                </button>
+                <div class="offcanvas offcanvas-end rounded-4 w-25" style="margin-top: 60px; margin-right: 30px; height: 60%" tabindex="-1" id="offcanvas-2" aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header">
+                    <!-- <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+                  </div>
+                  <div class="offcanvas-body">
+                    <div class="off-cans d-flex position-relative position-fixed">
+                      <div class="place">
+                        <i class="ri-search-line position-absolute" style="top: 6px; left: 8px"></i>
+                        <input type="text" class="form-control ps-5 rounded-5 border-2" placeholder="Search..." style="width: 90%" />
+                      </div>
+                      <i class="ri-settings-2-line pt-1 rounded-4 fs-5" style="background-color: #c3b7f3; margin-left: -10px"></i>
+                    </div>
+                    <div class="body-canva mt-5 ms-2">
+                      <p class="">Recently Searched Data:</p>
+                      <div class="center d-flex">
+                        <div class="center-card">
+                          <i class="ri-settings-2-line rounded-4 p-2 fs-5" style="background-color: #c3b7f3; color: #4125be"></i>
+                        </div>
+                        <div class="user-card ms-3">
+                          <h5 class="mt-" style="font-size: 17px; font-weight: 600">User Management</h5>
+                          <p class="ms-2" style="font-size: 14px">#RA789</p>
+                        </div>
+                      </div>
+
+                      <div class="center d-flex">
+                        <div class="center-card">
+                          <i class="ri-paint-brush-line rounded-4 p-2 fs-5" style="color: rgb(143, 143, 17); background-color: rgb(231, 231, 102)"></i>
+                        </div>
+                        <div class="user-card ms-3">
+                          <h5 class="mt-" style="font-size: 17px; font-weight: 600">Data visualization</h5>
+                          <p class="ms-2" style="font-size: 14px">#RA789</p>
+                        </div>
+                      </div>
+
+                      <div class="center d-flex">
+                        <div class="center-card">
+                          <i class="ri-shield-line rounded-4 p-2 fs-5" style="background-color: rgb(255, 179, 205); color: rgb(122, 80, 87)"></i>
+                        </div>
+                        <div class="user-card ms-3">
+                          <h5 class="mt-" style="font-size: 17px; font-weight: 600">security protocols</h5>
+                          <p class="ms-2" style="font-size: 14px">#ATR56</p>
+                        </div>
+                      </div>
+
+                      <div class="center d-flex">
+                        <div class="center-card">
+                          <i class="ri-profile-line rounded-4 p-2 fs-5" style="background-color: #c3b7f3; color: #4125be"></i>
+                        </div>
+                        <div class="user-card ms-3">
+                          <h5 class="mt-1" style="font-size: 17px; font-weight: 600">authentication methods</h5>
+                          <p class="ms-2" style="font-size: 14px">#YE615</p>
+                        </div>
+                      </div>
+
+                      <div class="center d-flex">
+                        <div class="center-card">
+                          <i class="ri-table-line rounded-4 p-2 fs-5" style="background-color: rgb(138, 133, 133); color: rgb(12, 11, 11)"></i>
+                        </div>
+                        <div class="user-card ms-3">
+                          <h5 class="mt-1" style="font-size: 17px; font-weight: 600">Data Table</h5>
+                          <p class="ms-2" style="font-size: 14px">#YE615</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3rd-icons -->
+                <button class="border-0" style="background: none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-3" aria-controls="offcanvasRight">
+                  <i class="ri-apps-line fs-4 m-1"></i>
+                </button>
+                <div class="offcanvas offcanvas-end rounded-4" style="margin-top: 60px; margin-right: 30px; height: 50%; width: 25%" tabindex="-1" id="offcanvas-3" aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header d-flex justify-content-between">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel" style="color: gray; font-size: 23px; font-weight: 600">ShortCut</h5>
+                    <div class="dropdown">
+                      <button class="btn border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="ri-bar-chart-horizontal-line"></i>
+                      </button>
+                      <ul class="dropdown-menu" style="width: 230px">
+                        <li><a class="dropdown-item m-2" href="#">Privacy Settings</a></li>
+                        <li><a class="dropdown-item m-2" href="#">Account Settings</a></li>
+                        <li><a class="dropdown-item m-2" href="#">Accessibility</a></li>
+                        <hr class="m-3" />
+                        <li><a class="dropdown-item m-2" href="#">More Settings</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="offcanvas-body">
+                    <div class="icons-card-wrap">
+                      <div class="icons-offcans d-flex justify-content-between m-4">
+                        <div>
+                          <i class="ri-shopping-bag-4-line fs-2 p-2 rounded-4" style="background-color: #ccc4f0; color: #654fc7"> </i>
+                          <p class="pt-1 ps-1" style="font-size: 15px; color: #583ecc; font-weight: 500">E-shop</p>
+                        </div>
+                        <div class="div">
+                          <i class="ri-mail-unread-line fs-2 p-2 rounded-4" style="background-color: #d8d1f5; color: #4e3c96"></i>
+                          <p class="ps-1 pt-1" style="color: #654fc7; font-weight: 500">Email</p>
+                        </div>
+                        <div class="div">
+                          <i class="ri-chat-2-line fs-2 p-2 rounded-4 position-relative" style="background-color: plum; color: rgb(126, 48, 126)"><sup class="badge position-absolute rounded-4" style="font-size: 12px; font-family: sans-serif; background-color: green">99+</sup></i>
+                          <p class="ps-2 pt-1" style="color: palevioletred; font-weight: 500">Chat</p>
+                        </div>
+                      </div>
+
+                      <div class="icons-offcans d-flex justify-content-between m-3" style="line-height: 5px">
+                        <div>
+                          <i class="ri-projector-line fs-2 p-2 rounded-4" style="background-color: rgb(223, 223, 180); color: rgb(172, 172, 41)"> </i>
+                          <p class="pt-4 ps-1" style="font-size: 15px; color: rgb(192, 192, 47); font-weight: 500">Project</p>
+                        </div>
+                        <div class="div">
+                          <i class="ri-receipt-line fs-2 p-2 rounded-4" style="background-color: #c0bfc2; color: #2d2c30"></i>
+                          <p class="ps-2 pt-4" style="color: #66646b; font-weight: 500">Invoice</p>
+                        </div>
+                        <div class="div">
+                          <i class="ri-news-line fs-2 p-2 rounded-4" style="background-color: rgb(183, 183, 243); color: rgb(46, 46, 88)"></i>
+                          <p class="ps-2 pt-4" style="color: rgb(158, 158, 236); font-weight: 500">Blog</p>
+                        </div>
+                      </div>
+
+                      <div class="icons-offcans d-flex justify-content-between m-3">
+                        <div>
+                          <i class="ri-team-line fs-2 p-2 rounded-4" style="background-color: #ccc4f0; color: #654fc7"> </i>
+                          <p class="pt-1 ps-1" style="font-size: 15px; color: #583ecc; font-weight: 500">Profile</p>
+                        </div>
+                        <div class="div">
+                          <i class="ri-gallery-view fs-2 p-2 rounded-4" style="background-color: rgba(29, 146, 29, 0.76); color: green"></i>
+                          <p class="ps-1 pt-1" style="color: rgb(105, 173, 105); font-weight: 500">Gallery</p>
+                        </div>
+                        <div class="div">
+                          <i class="ri-task-line fs-2 p-2 rounded-4" style="background-color: rgb(152, 152, 214); color: rgb(71, 71, 139)"></i>
+                          <p class="ps-2 pt-1" style="color: gray; font-weight: 500">Task</p>
+                        </div>
+                      </div>
+                      <div class="icons-offcans d-flex m-3">
+                        <div>
+                          <i class="ri-calendar-todo-line fs-2 p-2 rounded-4" style="background-color: gray; color: rgb(41, 37, 37)"> </i>
+                          <p class="pt-1 ps-1" style="font-size: 15px; color: gray; font-weight: 500">Calendar</p>
+                        </div>
+                        <div class="div">
+                          <i class="ri-file-line fs-2 p-2 rounded-4" style="background-color: rgb(255, 178, 204); color: rgb(129, 110, 113); margin-left: 40px"></i>
+                          <p class="ps-1 pt-1" style="color: palevioletred; font-weight: 500; margin-left: 40px">File Ma...</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 4th-icons -->
+
+                <!-- 5th-icons -->
+                <button class="border-0" style="background: none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                  <i class="ri-bell-line fs-4 m-1 position-relative"> <sup class="badge rounded-circle position-absolute" style="font-size: 10px; left: 17px; background-color: rgb(190, 26, 190)">4</sup></i>
+                </button>
+
+                <div class="offcanvas offcanvas-end rounded-4" style="margin-top: 20px; margin-right: 30px; height: 100%" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title fs-4 text-muted" id="offcanvasRightLabel" style="font-weight: 600">Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="main-div m-2">
+                    <!-- bag -->
+                    <div class="bag-card-dot rounded-5" style="border: 1px solid gray; height: 70px">
+                      <div class="bag-card p-2 d-flex">
+                        <img class="" src="19.jpg " alt="" style="width: 50px; height: 50px" />
+                        <h4 class="mt-2" style="font-size: 17px; color: #261768; font-weight: 600">
+                          BackPacks <sanp class="text-muted">(3<i class="ri-star-line" style="color: yellow"></i>)</sanp>
+                        </h4>
+                      </div>
+                      <div class="div d-flex gap-2">
+                        <p class="text-dark" style="margin-top: -27px; margin-left: 60px; font-weight: 500">size: <span class="text-muted">medium</span></p>
+                        <p class="text-dark" style="margin-top: -27px; font-weight: 500">color:<span class="text-muted">pink</span></p>
+                        <h4 class="ms-4" style="font-size: 14px; margin-top: -25px; color: green">$600.50 x</h4>
+                      </div>
+                    </div>
+                    <!-- bag-end -->
+
+                    <!-- watch -->
+                    <div class="bag-card-dot rounded-5 mt-2" style="border: 1px solid gray; height: 70px">
+                      <div class="bag-card p-2 d-flex">
+                        <img class="rounded-3 ms-2" src="13.jpg " alt="" style="width: 40px; height: 50px" />
+                        <h4 class="mt-2 ms-3" style="font-size: 17px; color: #261768; font-weight: 600">
+                          Woman's watch <sanp class="text-muted">(4<i class="ri-star-line" style="color: yellow"></i>)</sanp>
+                        </h4>
+                      </div>
+                      <div class="div d-flex gap-2">
+                        <p class="text-dark" style="margin-top: -27px; margin-left: 70px; font-weight: 500">size: <span class="text-muted">small</span></p>
+                        <p class="text-dark" style="margin-top: -27px; font-weight: 500">color:<span class="text-muted">RoseGold</span></p>
+                        <h4 class="ms-2" style="font-size: 14px; margin-top: -25px; color: green">$600.50 x</h4>
+                      </div>
+                    </div>
+                    <!-- watch-end -->
+
+                    <!-- shoes -->
+                    <div class="bag-card-dot rounded-5 mt-2" style="border: 1px solid gray; height: 70px">
+                      <div class="bag-card p-2 d-flex">
+                        <img class="rounded-3 ms-2" src="09.jpg " alt="" style="width: 40px; height: 50px" />
+                        <h4 class="mt-2 ms-3" style="font-size: 17px; color: purple; font-weight: 600">
+                          Sandals <sanp class="text-muted">(5<i class="ri-star-line" style="color: yellow"></i>)</sanp>
+                        </h4>
+                      </div>
+                      <div class="div d-flex gap-2">
+                        <p class="text-dark" style="margin-top: -27px; margin-left: 70px; font-weight: 500">size: <span class="text-muted">8</span></p>
+                        <p class="text-dark" style="margin-top: -27px; font-weight: 500">color:<span class="text-muted">white</span></p>
+                        <h4 class="" style="font-size: 14px; margin-top: -25px; color: green; margin-left: 70px">$600.50 x</h4>
+                      </div>
+                    </div>
+                    <!-- bag-end -->
+
+                    <!-- jakect -->
+                    <div class="bag-card-dot rounded-5 mt-2" style="border: 1px solid gray; height: 70px">
+                      <div class="bag-card p-2 d-flex">
+                        <img class="" src="19.jpg" alt="" style="width: 50px; height: 50px" />
+                        <h4 class="mt-2" style="font-size: 17px; color: #261768; font-weight: 600">
+                          BackPacks <sanp class="text-muted">(3<i class="ri-star-line" style="color: yellow"></i>)</sanp>
+                        </h4>
+                      </div>
+                      <div class="div d-flex gap-2">
+                        <p class="text-dark" style="margin-top: -27px; margin-left: 60px; font-weight: 500">size: <span class="text-muted">medium</span></p>
+                        <p class="text-dark" style="margin-top: -27px; font-weight: 500">color:<span class="text-muted">pink</span></p>
+                        <h4 class="ms-4" style="font-size: 14px; margin-top: -25px; color: green">$600.50 x</h4>
+                      </div>
+                    </div>
+                    <!-- bag-end -->
+
+                    <!-- bag -->
+                    <div class="bag-card-dot rounded-5 mt-2" style="border: 1px solid gray; height: 70px">
+                      <div class="bag-card p-2 d-flex">
+                        <img class="rounded-3 ms-2" src="11.jpg" alt="" style="width: 40px; height: 50px" />
+                        <h4 class="mt-2 ms-2" style="font-size: 17px; color: #261768; font-weight: 600">
+                          Shoes <sanp class="text-muted">(2<i class="ri-star-line" style="color: yellow"></i>)</sanp>
+                        </h4>
+                      </div>
+                      <div class="div d-flex gap-2">
+                        <p class="text-dark" style="margin-top: -27px; margin-left: 65px; font-weight: 500">size: <span class="text-muted">9</span></p>
+                        <p class="text-dark" style="margin-top: -27px; font-weight: 500">color:<span class="text-muted">pink</span></p>
+                        <h4 class="" style="font-size: 14px; margin-top: -25px; color: green; margin-left: 80px">$600.50 x</h4>
+                      </div>
+                    </div>
+                    <hr />
+                    <!-- bag-end -->
+                    <div class="offcanvas-body">
+                      <div class="end-body d-flex justify-content-between">
+                        <h3>Total</h3>
+                        <h3>$3,468.00</h3>
+                      </div>
+                      <div class="btn-body d-flex">
+                        <button class="butn-body rounded-5 border-0"><i class="ri-eye-line p-2"></i>view chart</button>
+                        <button class="btns-body rounded-5 border-0 ms-2">Chcekout<i class="ri-shopping-cart-line ms-1"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="border-0" style="background: none">
+                  <i class="ri-sun-line fs-4"></i>
+                </button>
+
+                <!-- 6th-icons -->
+                <button class="border-0" style="background: none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-6" aria-controls="offcanvasRight">
+                  <i class="ri-notification-2-line fs-4 m-1"></i>
+                </button>
+
+                <div class="offcanvas offcanvas-end rounded-4" style="margin-top: 20px; margin-right: 30px; height: 70%; width: 32%" tabindex="-1" id="offcanvas-6" aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Notification</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <div class="close-body">
+                      <div class="image-pic d-flex">
+                        <img class="rounded-3 p-1 m-2" src="17.pic" alt="" />
+                        <p class="mt-2">Gene Hart wants to edit Report.doc <span class="spn-col"> Approve</span><span class="deny"> Deny</span></p>
+                      </div>
+                      <!-- <div class="bad-bage badge bg-info ">sep 23</div> -->
+                    </div>
+
+                    <div class="close-body mt-2">
+                      <div class="image-pic d-flex">
+                        <i class="ri-truck-line m-3 pt-1 ps-2"></i>
+                        <p class="mt-2">Hey Emery McKenzie, get ready: Your order from <span style="font-weight: 500">@Shopper.com</span> is out for delivery today!</p>
+                      </div>
+                      <!-- <div class="bad-bage badge bg-info ">sep 23</div> -->
+                    </div>
+
+                    <div class="close-body mt-2">
+                      <div class="image-pic d-flex">
+                        <img class="rounded-3 p-1 m-2" src="15.pic" alt="" />
+                        <p class="mt-2">Simon Young shared a file called <span style="font-weight: 500">Dropdown.pdf</span></p>
+                      </div>
+                      <!-- <div class="bad-bage badge bg-info ">sep 23</div> -->
+                    </div>
+
+                    <div class="close-body mt-2">
+                      <div class="image-pic d-flex">
+                        <img class="rounded-3 p-1 m-2" src="16.pic" alt="" />
+                        <p class="mt-2">Simon Young shared a file called <span style="font-weight: 500">Dropdown.pdf</span></p>
+                      </div>
+                      <!-- <div class="bad-bage badge bg-info ">sep 23</div> -->
+                    </div>
+
+                    <div class="close-body">
+                      <div class="image-pic d-flex">
+                        <img class="rounded-3 p-1 m-2" src="14.pic" alt="" />
+                        <p class="mt-2">
+                          Romaine Nadeau invited you to join a meeting
+                          <span class="spn-col"
+                            ><br />
+                            join</span
+                          ><span class="deny"> Decline</span>
+                        </p>
+                      </div>
+                      <!-- <div class="bad-bage badge bg-info ">sep 23</div> -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 7th-icons -->
+                <button class="border-0" style="background: none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-7" aria-controls="offcanvasRight">
+                  <img src="woman.jpg" alt="" class="rounded-circle" style="width: 30px; height: 30px" />
+                </button>
+                <div class="offcanvas offcanvas-end rounded-4" style="margin-top: 20px; margin-right: 30px; height: 60%; width: 23%" tabindex="-1" id="offcanvas-7" aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header">
+                    <!-- <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+                  </div>
+                  <div class="offcanvas-body">
+                    <div class="picture-body-offcanvas">
+                      <div class="picture-body d-flex">
+                        <img src="woman.jpg" alt="" class="m-2" />
+                        <p class="m-2">Laura Monaldo</p>
+                        <i class="ri-checkbox-line mt-1 fs-4" style="color: skyblue"></i>
+                      </div>
+                      <div class="body-para">
+                        <p>lauradesign@gmail.com</p>
+                      </div>
+                    </div>
+                    <div class="perosn-profile">
+                      <div class="div d-flex">
+                        <i class="ri-group-line fs-5 d-flex"></i>
+                        <p class="ms-1 pt-1 text-muted">Profile Details</p>
+                      </div>
+                      <div class="perosn-profil d-flex">
+                        <i class="ri-settings-2-line fs-5"></i>
+                        <p class="ms-1 pt-1 text-muted">Setting</p>
+                      </div>
+                    </div>
+                    <hr />
+
+                    <div class="hide">
+                      <div class="perosn-profil d-flex">
+                        <i class="ri-eye-close-fill fs-5"></i>
+                        <p class="ms-1 pt-1 text-muted">Hide setting</p>
+                      </div>
+                      <div class="noti">
+                        <div class="perosn-profil d-flex">
+                          <i class="ri-notification-line fs-5"></i>
+                          <p class="ms-1 pt-1 text-muted d-flex justify-content-between">Notification</p>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input ms-5" type="checkbox" role="switch" id="switchCheckChecked" checked />
+                          </div>
+                        </div>
+                        <div class="perosn-profil d-flex">
+                          <i class="ri-artboard-line fs-5"></i>
+                          <p class="ms-1 pt-1 text-muted d-flex">Incognito</p>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" style="margin-left: 60px" type="checkbox" role="switch" id="switchCheckDefault" />
+                          </div>
+                        </div>
+                      </div>
+                      -------------------------------------------
+                      <div class="perosn-profile">
+                        <div class="div d-flex">
+                          <i class="ri-question-line fs-5"></i>
+                          <p class="ms-1 pt-1 text-muted">Helps</p>
+                        </div>
+                        <div class="perosn-profil d-flex">
+                          <h5 class="ps-1">$</h5>
+                          <p class="ms-1 pt-1 text-muted">Pricing</p>
+                        </div>
+                        <div class="perosn-profil d-flex">
+                          <i class="ri-add-line fs-5"></i>
+                          <p class="ms-1 pt-1 text-muted">Add Account</p>
+                        </div>
+                        <button><i class="ri-expand-right-fill"></i>Log out</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- card-start -->
+        <!-- first-col-card-start -->
+        <div class="row m-3 mx-auto gy-3" style="background-color: #e9e7e7">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="bg-white rounded-4">
+              <h4 class="fs-5 f-w-600 text-dark txt-ellipsis-1 m-2 pt-3">📈 Orders Provided</h4>
+              <h2 class="text-secondary-dark mb-0 pt-1 p-3">2.36k</h2>
+            </div>
+
+            <div class="const mt-3 rounded-4">
+              <p class="f-s-18 txt-ellipsis-1 pt-2 ms-4 fs-5" style="font-weight: 600">Order Import</p>
+              <i class="ri-calendar-2-line ms-3"><span class="ms-2 text-decoration-none" style="font-family: sans-serif; font-weight: 600">Oct 1 - Oct 15, 2024</span></i>
+              <h2 class="text-secondary-dark mb-0 p-3 ms-2;" style="color: rgb(21, 38, 75)">2,450</h2>
+
+              <div class="btnnn p-2">
+                <button class="ms-3 border-0" style="width: 100px; height: 10px; border-radius: 100px; background-color: rgb(4, 22, 59)">
+                  <p class="pt-3" style="font-size: 14px; color: rgb(5, 11, 22); font-weight: 600">Productive</p>
+                </button>
+
+                <button class="border-0" style="width: 90px; height: 10px; border-radius: 100px; background-color: rgb(39, 80, 168)">
+                  <p class="pt-3" style="font-size: 14px; color: rgb(4, 11, 27); font-weight: 600">Middle</p>
+                </button>
+
+                <button class="border-0" style="width: 70px; height: 10px; border-radius: 50px; background-color: rgb(131, 158, 216)">
+                  <p class="pt-3 ms-4" style="font-size: 14px; color: rgb(8, 13, 26); font-weight: 600">Idle</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="main-card rounded-5 mt-2">
+              <i class="ph-bold ph-circle circle-bg-img"></i>
+              <h5 class="f-s-18 f-w-600 text-dark txt-ellipsis-1 pt-4 ms-4 fs-5">Product Sold</h5>
+              <hr />
+              <h3 class="mb-0 pt-5 fs-3 ms-4" style="color: rgb(21, 38, 75); line-height: 2px">$6.56k</h3>
+              <p class="p-4" style="color: rgb(4, 12, 31)">Last week<span class="badge text-decoration-none ms-2" style="font-size: 12px; background-color: rgb(223, 151, 223)">-45%</span></p>
+            </div>
+            <div class="4th-chart bg-white rounded-4">
+              <h5 class="text-success f-s-18 f-w-600 txt-ellipsis-1 p-2 ms-2">📝 Store Product</h5>
+              <h2 class="p-2 fw-bold">-6,876</h2>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="chart-title bg-white rounded-4 p-1">
+              <h2 class="fs-5 ms-2 p-2">Orders details</h2>
+              <div class="cancel m-1 rounded-4">
+                <div class="collpse d-flex justify-content-between">
+                  <h6 class="text-success-dark f-w-600 mb-0 m-2">📦#H54367890</h6>
+                  <span class="badge text-decoration-none m-2 p-1 text-dark" ;>Canceled</span>
+                </div>
+
+                <h4 class="ms-2 pt-2" ;>You order was Canceled..</h4>
+                <h5 class="pt-2 p-2">Dtae Ordered: Novemeber 28, 2024</h5>
+              </div>
+              <div class="dilverd rounded-4 m-1" style="background-color: rgb(178, 206, 178)">
+                <div class="collps d-flex justify-content-between">
+                  <h6 class="text-success-dark f-w-600 mb-0 m-2">📦#H54367890</h6>
+                  <span class="badge text-decoration-none m-2 p-1 text-dark" ;>Dilvered</span>
+                </div>
+
+                <h4 class="ms-2 pt-2" style="font-size: 15px">You order was dilvered</h4>
+                <h5 class="pt-2 p-2">Novemeber 30, 2024</h5>
+              </div>
+
+              <div class="shipped rounded-4 m-1" style="background-color: rgb(193, 193, 243)">
+                <div class="collp d-flex justify-content-between">
+                  <h6 class="text-success-dark f-w-600 mb-0 m-2">📦#H54367890</h6>
+                  <span class="badge text-decoration-none m-2 p-1 text-dark" ;>Shipped</span>
+                </div>
+                <h4 class="ms-2 pt-2" style="font-size: 15px" ;>You order was been shipped and</h4>
+                <h5 class="pt-2 p-2">will bhe dilvered by December 3,.....</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="second-chart rounded-4 ms-1">
+              <div class="flow-chart d-flex gap-1">
+                <div class="link p-1 ms-2">
+                  <button class="ms-1 border-0"></button>
+                  <h4 class="iteam" style="font-size: 13px">26 Feb</h4>
+                </div>
+                <div class="chat p-1 ms-2">
+                  <button class="ms-2 border-0"></button>
+                  <h4 class="" style="font-size: 13px">29 Feb</h4>
+                </div>
+
+                <div class="core p-1 ms-2">
+                  <button class="ms-1 border-0"></button>
+                  <h4 class="ms-1" style="font-size: 13px">1 Mar</h4>
+                </div>
+                <div class="hight p-1 ms-2">
+                  <button class="ms-2 border-0"></button>
+                  <h4 class="ms-2" style="font-size: 13px">2 Mar</h4>
+                </div>
+                <div class="cor p-1 ms-1">
+                  <button class="ms-2 border-0"></button>
+                  <h4 class="ms-2" style="font-size: 13px">3 Mar</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-list-card col-lg-7 col-md-11 col-sm-12 bg-white rounded-4 ms-sm-0 ms-lg-4 ms-md-4">
+            <div class="product d-flex justify-content-between">
+              <div class="sell pt-4">
+                <h5>Product</h5>
+                <p class="mt-3">Wireless phone</p>
+                <p class="mt-3">Smartwatch</p>
+                <p class="mt-3">bluetooth speaker</p>
+                <p class="mt-3">4k Utlra HD TV</p>
+              </div>
+              <div class="unit m-3 ps-4 pt-2">
+                <h5>unit</h5>
+                <span class="badge text-decoration-none mt-3" style="background-color: #95c9a4">250</span><br />
+                <span class="badge text-decoration-none mt-4" style="background-color: #95c9a4">210</span><br />
+                <span class="badge text-decoration-none mt-3" style="background-color: #705ec2">190</span><br />
+                <span class="badge text-decoration-none mt-4" style="background-color: #f4afe8">175</span>
+              </div>
+              <div class="sale m-3 ms-3 pt-2">
+                <h5>sale</h5>
+                <h4 class="mt-4" style="font-size: 15px">$5,000</h4>
+                <h4 class="mt-4" style="font-size: 15px">$5,000</h4>
+
+                <h4 class="mt-4" style="font-size: 15px">$4,200</h4>
+                <h4 class="mt-4" style="font-size: 15px">$3,800</h4>
+              </div>
+              <div class="rating m-4">
+                <h5>rating</h5>
+                <p class="pt-3" style="font-weight: 600; font-size: 14px">
+                  <i class="ri-star-line" style="color: rgba(233, 233, 16, 0.89)"></i>
+                  4.5
+                </p>
+                <p class="pt- ms-2" style="font-weight: 600; font-size: 14px"><i class="ri-star-line" style="color: rgba(233, 233, 16, 0.89)"> </i>4</p>
+                <p style="font-weight: 600; font-size: 14px">
+                  <i class="ri-star-line" style="color: rgba(233, 233, 16, 0.89)"></i>
+                  4.5
+                </p>
+                <p style="font-weight: 600; font-size: 14px">
+                  <i class="ri-star-line" style="color: rgba(233, 233, 16, 0.89)"></i>
+                  4.9
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 col-md-6 col-sm-12">
+            <div class="cout d-flex justify-content-between">
+              <div class="box-1 1 m-1 fs-5 rounded-5">
+                <img src="gemeny.png" alt="" class="w-25 rounded-5 m-3" />
+                <h4 class="ps-3" style="font-size: 17px; line-height: 0.5px" l>Australia</h4>
+                <p class="ms-3 pt-1" style="font-size: 15px; font-weight: 500">3.8k</p>
+              </div>
+              <div class="box-2 m-1 rounded-5">
+                <img src="aus.jpg" alt="" class="w-25 rounded-5 m-4" />
+                <h4 class="ps-3" style="font-size: 17px; line-height: 0.5px" l>Australia</h4>
+                <p class="ms-3 pt-1" style="font-size: 17px; font-weight: 500">3.8k</p>
+              </div>
+              <div class="box-3 m-1 rounded-5">
+                <img src="usa.png" alt="" class="w-25 rounded-5 m-4" />
+                <h4 class="ps-3" style="font-size: 17px; line-height: 0.5px" l>Australia</h4>
+                <p class="ms-3 pt-1" style="font-size: 17px; font-weight: 500">3.8k</p>
+              </div>
+            </div>
+
+            <div class="cout d-flex justify-content-between mt-2">
+              <div class="box-4 1 m-1 fs-5 rounded-5">
+                <img src="france.png" alt="" class="w-25 rounded-5 ms-3 mt-3" />
+                <h4 class="ps-3 pt-3" style="font-size: 19px; line-height: 0.5px" l>France</h4>
+                <p class="ms-3 pt-1" style="font-size: 17px; font-weight: 500">3.8k</p>
+              </div>
+              <div class="box-5 m-1 rounded-5">
+                <img src="new.png" alt="" class="w-25 rounded-5 m-4" />
+                <h4 class="ps-3" style="font-size: 17px; line-height: 0.5px" l>New York</h4>
+                <p class="ms-3 pt-1" style="font-size: 17px; font-weight: 500">3.8k</p>
+              </div>
+              <div class="box-6 m-1 rounded-5">
+                <img src="span.png" alt="" class="w-25 rounded-5 m-4" />
+                <h4 class="ps-3" style="font-size: 17px; line-height: 0.5px" l>Spain</h4>
+                <p class="ms-3 pt-1" style="font-size: 19px; font-weight: 500">3.8k</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="prot-card-box col-lg-4 col-md-5 col-sm-12 bg-white rounded-4 ms-lg-4 ms-md-3 ms-sm-0">
+            <div class="emily d-flex justify-content-between mt-3">
+              <div class="eim mt-2 d-flex">
+                <p style="width: 33px; height: 33px; background-color: #cec8e9; font-size: 16px; font-weight: 500" class="p-2 pt-1 rounded-4">D</p>
+                <h5 class="text-decoration-none pt-1 ms-2" style="font-size: 15px; color: rgb(6, 26, 87)">Emily Johnson</h5>
+              </div>
+              <div class="plus">
+                <h2 class="ps-2 mt-2 fs-4 rounded-4" style="width: 30px; height: 30px; background-color: #beb6e2">+</h2>
+              </div>
+            </div>
+
+            <div class="emily d-flex justify-content-between">
+              <div class="eim d-flex">
+                <p style="width: 33px; height: 33px; background-color: rgb(235, 153, 235); font-size: 14px; font-weight: 500" class="ps-2 pt-1 rounded-4">AD</p>
+                <h5 class="text-decoration-none pt-1 ms-2" style="font-size: 15px; color: rgb(6, 26, 87)">Emily Johnson</h5>
+              </div>
+              <div class="plus">
+                <h2 class="ps-2 fs-4 rounded-4" style="width: 30px; height: 30px; background-color: plum">-</h2>
+              </div>
+            </div>
+
+            <div class="emily d-flex justify-content-between">
+              <div class="eim d-flex">
+                <p style="width: 33px; height: 33px; background-color: rgb(235, 235, 167); font-size: 14px; font-weight: 500" class="ps-2 pt-1 rounded-4">AD</p>
+                <h5 class="text-decoration-none pt-1 ms-2" style="font-size: 15px; color: rgb(6, 26, 87)">Emily Johnson</h5>
+              </div>
+              <div class="plus">
+                <h2 class="ps-2 fs-4 rounded-4" style="width: 30px; height: 30px; background-color: #d6d3e4">+</h2>
+              </div>
+            </div>
+
+            <div class="emily d-flex justify-content-between">
+              <div class="eim d-flex">
+                <p style="width: 33px; height: 33px; background-color: #d6d3e4; font-size: 14px; font-weight: 500" class="ps-2 pt-1 rounded-4">AD</p>
+                <h5 class="text-decoration-none pt-1 ms-2" style="font-size: 15px; color: rgb(6, 26, 87)">Emily Johnson</h5>
+              </div>
+              <div class="plus">
+                <h2 class="ps-2 fs-4 rounded-4" style="width: 30px; height: 30px; background-color: #d6d3e4">+</h2>
+              </div>
+            </div>
+
+            <div class="emily d-flex justify-content-between">
+              <div class="eim d-flex">
+                <p style="width: 33px; height: 33px; background-color: plum; font-size: 14px; font-weight: 500" class="ps-2 pt-1 rounded-4">AD</p>
+                <h5 class="text-decoration-none pt-1 ms-2" style="font-size: 15px; color: rgb(6, 26, 87)">Emily Johnson</h5>
+              </div>
+              <div class="plus">
+                <h2 class="ps-2 fs-4 rounded-4" style="width: 30px; height: 30px; background-color: plum">-</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mx-auto gy-4">
+            <div class="col-lg-6 col-md-6 col-sm-12 bg-white rounded-4">
+              <div class="drop d-flex justify-content-between">
+                <div class="dropdown pt-2">
+                  <button class="btn border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-bar-chart-horizontal-line"></i>
+                  </button>
+                  <ul class="dropdown-menu" style="background-color: navajowhite">
+                    <li>
+                      <a class="dropdown-item" href="#">Last Month</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Last Week</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Last Year</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- second-button -->
+                <div class="dropdown pt-2">
+                  <a class="btn btn- dropdown-toggle rounded-5" style="border: 1px solid gray" href="#" role="button " data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="text-decoration-none m-3">Filter</span>
+                  </a>
+
+                  <ul class="dropdown-menu" style="background-color: #7d6dc2">
+                    <li><a class="dropdown-item" href="#">Filter</a></li>
+                    <li><a class="dropdown-item" href="#">Fashion</a></li>
+                    <li><a class="dropdown-item" href="#">Book</a></li>
+                    <li><a class="dropdown-item" href="#">Sports</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="coth d-flex justify-content-between mt-3 rounded-4" style="background-color: #c4b9fdee">
+                <div class="cloth m-2 pt-1">
+                  <h5 style="font-size: 16px; color: rgb(14, 14, 100)">Clothing & Accessories</h5>
+                </div>
+                <p class="m-2 pt-1" style="font-weight: 500; font-size: 15px">
+                  $5,000
+                  <span class="badge text-decoration-none" style="background-color: #c1b5f5">5641</span>
+                </p>
+              </div>
+
+              <div class="coth d-flex justify-content-between mt-2 rounded-4 mt-3" style="background-color: #d1caf7ee">
+                <div class="cloth m-2 pt-1">
+                  <h5 style="font-size: 16px; color: rgb(14, 14, 100)">Home & Kitchen</h5>
+                </div>
+                <p class="m-2 pt-1" style="font-weight: 500; font-size: 15px">
+                  $5,000
+                  <span class="badge text-decoration-none" style="background-color: #a692ff">10k</span>
+                </p>
+              </div>
+
+              <div class="coth d-flex justify-content-between mt-3 rounded-4 mt-2" style="background-color: rgb(248, 200, 248)">
+                <div class="cloth m-2 pt-1">
+                  <h5 style="font-size: 16px; color: rgb(14, 14, 100)">Electronics</h5>
+                </div>
+                <p class="m-2 pt-1" style="font-weight: 500; font-size: 15px">
+                  $5,000
+                  <span class="badge text-decoration-none" style="background-color: rgb(214, 136, 149)">6897</span>
+                </p>
+              </div>
+
+              <div class="coth d-flex justify-content-between mt-2 rounded-4 mt-3" style="background-color: rgb(248, 224, 181)">
+                <div class="cloth m-2 pt-1">
+                  <h5 style="font-size: 16px; color: rgb(14, 14, 100)">Jewellery</h5>
+                </div>
+                <p class="m-2 pt-1" style="font-weight: 500; font-size: 15px">
+                  $5,000
+                  <span class="badge text-decoration-none" style="background-color: rgb(211, 170, 95)">5641</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-5 col-md-5 col-sm-12 bg-white rounded-4 ms-lg-5 ms-md-4 ms-sm-0">
+              <div class="last-cards">
+                <img src="done.pic" alt="" />
+                <h5 class="ms-3">Thank You!</h5>
+                <p class="ms-3" style="color: rgb(20, 207, 20); font-weight: 500">Your transaction was successful <img src="celebration.gif" alt="" style="width: 30px; margin-top: -20px" /></p>
+              </div>
+              ------------------------------------------------------------
+              <div class="last-id d-flex justify-content-between">
+                <div class="id">
+                  <i class="ri-wallet-line d-flex"><p class="ms-1">Transaction ID</p></i>
+                  <p class="ps-2" style="margin-top: -13px; font-weight: 600">568368657681</p>
+                </div>
+                <p class="">$ Amount</p>
+              </div>
+              <i class="ri-calendar-line d-flex"><p class="ps-2" style="font-family: sans-serif; font-weight: 500">Date & Time</p></i>
+              <h5 class="" style="font-size: 15px; margin-top: -10px; font-weight: 600">15 Jun 2024 • 6:90PM</h5>
+            </div>
+          </div>
+
+          <div class="row w-100">
+            <div class="col-lg-12 col-md-12">
+              <hr />
+              <div class="copy-right d-flex justify-content-between">
+                <div class="copy">
+                  <p class="fw-medium">Copyright © 2025 axelit. All rights reserved V1.0.0 ✨</p>
+                </div>
+                <p>Need Help<i class="ri-question-line ps-1"></i></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- first-col-card-end -->
+          <!-- card-end -->
+
+          <!-- end -->
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  </body>
+</html>
