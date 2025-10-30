@@ -1,15 +1,23 @@
-* {
+*{
   padding: 0;
   margin: 0;
+ 
 }
 
-body {
+body{
   font-family: "Montserrat", sans-serif !important;
-  overflow-x: hidden;
+  /* overflow-X: hidden; */
+  padding: 0;
+  margin: 0;
+  background-color: #e9e7e7;
+  
 }
-aside span {
+
+
+.aside span {
   text-decoration: underline;
 }
+
 aside {
   padding: 10px;
 }
@@ -57,7 +65,7 @@ aside .nav-link-wrapper .nav-main-link[aria-expanded="true"] .nav-link-text {
 aside .nav-link-wrapper .nav-main-link {
   border-radius: 15 px !important;
   /* color: #241187 !important; */
-  padding: 6px 13px !important;
+  padding: 6px 10px !important;
   background: none;
   color: black !important;
   transition: 0.3s all ease;
@@ -65,7 +73,8 @@ aside .nav-link-wrapper .nav-main-link {
 aside .nav-link-wrapper .nav-main-link.active,
 aside .nav-link-wrapper .nav-main-link[aria-expanded="true"] {
   background-color: #d6d0f4 !important;
-  color: #241187 !important;
+  color: rgb(14, 14, 110) !important;
+
 }
 aside .nav-link-wrapper .nav-main-link[aria-expanded="true"] .arrow {
   transform: rotate(90deg);
@@ -85,7 +94,11 @@ aside .nav-link-wrapper .nav-main-link[aria-expanded="true"] .arrow {
 .rotate i {
   color: blue;
   transform: rotate(90deg);
-}
+ } 
+.span-icons{
+  margin-left: 2px;
+  border-radius: 50%;
+} 
 
 .dashborad-sidebar {
   width: 18%;
@@ -93,10 +106,10 @@ aside .nav-link-wrapper .nav-main-link[aria-expanded="true"] .arrow {
   position: fixed;
   /* cursor: pointer; */
   transition: all 0.3s ease;
-  /* overflow: hidden; */
+ /* overflow: hidden;  */
 }
 .bar-link-col.collapsed {
-  width: 95% !important;
+  width: 90% !important;
   margin-left: 5%;
 }
 header #search-app-open {
@@ -533,7 +546,34 @@ header #search-app-open {
   font-size: 14px;
 }
 
-@media (max-width: 768px) {
+.phone-table p{
+  font-weight: 600;
+  color: gray;
+font-size: 17px;
+
+}
+
+.th-span span{
+  background-color: #95c9a4;
+  text-decoration: none;
+}
+
+.th-blue span{
+  background-color: #705ec2;
+  text-decoration: none;
+}
+
+.th-pink span{
+background-color: #f4afe8;
+text-decoration: none;
+}
+
+.th-para h4{
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@media (max-width:768px) {
   .bar-link-col {
     margin-left: 0;
     width: 100%;
@@ -567,6 +607,18 @@ header #search-app-open {
     margin-right: 20px !important;
     height: 35% !important;
   }
+
+  .btn-offcanva{
+     width: 40px !important;
+     height: 45px !important;
+     border: none;
+      background-color: #ac1492 !important;
+      margin-left: -300px !important;
+  
+  }
+
+
+
 }
 
 @media (max-width: 430px) {
@@ -610,6 +662,28 @@ header #search-app-open {
     margin-left: 15px;
     background-color: #4a3c9b;
   }
+
+  
+  .btn-offcanva{
+     width: 40px !important;
+     height: 45px !important;
+     border: none;
+      background-color: rgb(253, 253, 253) !important;
+      margin-left: 10px !important;
+        margin-top: -20px !important;
+  
+  }
+
+
+  #offcanvasWithBothOptions{
+     width: 65% !important;
+  }
+
+  .nav-links{
+   margin-left: 50px!important;
+ 
+  }
+
 }
 @media (min-width: 1020px) {
   .dashborad-sidebar.collapsed {
@@ -635,6 +709,7 @@ header #search-app-open {
     text-align: center;
     gap: 0px !important;
   }
+
 }
 @media (max-width: 1019px) {
   .dashborad-sidebar.collapsed {
@@ -644,4 +719,153 @@ header #search-app-open {
     width: 100% !important;
     margin-left: 0%;
   }
+}
+
+/* table- start */
+
+.table-waper h1{
+  font-size: 24px;
+  color: black;
+  font-weight: 600;
+}
+
+.table-waper i{
+  font-size: 17px;
+  color: black;
+ font-weight: 500;
+ 
+}
+
+
+.table-waper span{
+  font-size: 18px;
+  color: black;
+ font-weight: 500;
+ font-family: sans-serif;
+ 
+}
+
+
+.table-waper a{
+  font-size: 17px;
+  text-decoration: none;
+ font-weight: 500;
+ color: rgb(122, 13, 224);
+ font-family: serif;
+ 
+}
+
+
+ .table-one th{
+  font-size: 14px;
+  font-weight: 400;
+  
+
+}
+
+ .table-one td{
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+ 
+
+}
+
+
+.th-span span{
+  background-color: #a698e9;
+   color: #0c0529;
+    font-size: 12px;
+     font-weight: 660;
+}
+
+.th-pan span{
+   background-color: #a6a4ac;
+   color: #37363a;
+    font-size: 12px;
+     font-weight: 660;
+}
+
+.th-san span{
+   background-color: rgb(187, 231, 187);
+   color: #3a3a3b;
+    font-size: 12px;
+     font-weight: 660;
+}
+
+.th-spn span{
+   background-color: rgb(248, 248, 177);
+   color: #3a3a3b;
+    font-size: 12px;
+     font-weight: 660
+}
+
+.th-spans span{
+  background-color: rgb(233, 198, 233);
+  font-size: 12px;
+  color: rgb(146, 62, 146);
+  font-weight: 600;
+}
+
+.sale-span span{
+  color: green;
+  font-size: 14px;
+}
+
+
+.table-one img{
+  width: 35px;
+   height: 35px; 
+  object-fit: cover;
+}
+
+.table-id th {
+  font-size: 14px;
+}
+
+.span-text span{
+  margin-top: 10px;
+  font-size: 14px;
+  color:black;
+  font-weight: 500;
+}
+
+.card-title-waper{
+  background: none;
+}
+
+.card-body-text {
+  font-size: 14px;
+}
+
+.card-body-text span {
+  background-color: rgb(219, 198, 219);
+  color: rgb(189, 52, 189);
+  font-size: 12px;
+}
+
+.table-hovr:hover{
+  background-color: #403481;
+}
+
+.table:nth-of-type(5) tr:hover{
+  background-color: #f4afe8;
+}
+
+.table-salry h4{
+  font-size: 17px;
+  font-weight: 600;
+}
+.table-name h4{
+  font-weight: 600;
+  font-size: 17px;
+}
+.table-name p{
+  font-size: 13px;
+  color: black;
+}
+
+.table-salry p{
+  font-size: 13px;
+  color: black;
 }
