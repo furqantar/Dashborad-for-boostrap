@@ -869,3 +869,23 @@ text-decoration: none;
   font-size: 13px;
   color: black;
 }
+
+/* +++++ data table ++++ */
+.dt-paging .pagination .page-item .page-link{
+  box-shadow: none !important;
+  color: black;
+}
+.dt-paging ul li button:hover{
+  color: black;
+}
+.dt-paging .pagination .page-item.active .page-link{
+ background-color: black;
+ color: white;
+ border: 2px solid white;
+}
+.form-select{
+box-shadow: none !important;
+}
+.form-select:focus{
+  outline: 1px solid #0DCAF0;
+}

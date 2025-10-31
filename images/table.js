@@ -19,6 +19,7 @@ SidebarcollapseBtn.forEach((clp) => {
   });
 });
 
+
 document.addEventListener('DOMContentLoaded', function(){
-  const table = new DataTable('#myTable');
+  const table = new DataTable('#myTable,#myTable1');
 })
