@@ -19,7 +19,11 @@ SidebarcollapseBtn.forEach((clp) => {
   });
 });
 
-
-document.addEventListener('DOMContentLoaded', function(){
-  const table = new DataTable('#myTable,#myTable1');
-})
+$(document).ready(function() {
+    $('#myTable,myTable1').DataTable({
+      pageLength: 6,
+      lengthMenu: [4, 5, 6],
+      responsive: true,
+      ordering: false
+    });
+  });
