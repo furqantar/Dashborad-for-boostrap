@@ -896,3 +896,11 @@ box-shadow: none !important;
 .form-select:focus{
   outline: 1px solid #0DCAF0;
 }
+
+.user-icon-perosn {
+  border: 1px solid gray;
+border-radius: 20px;
+ background-color: gray; 
+     padding: 5px;
+        margin: 5px;
+}
